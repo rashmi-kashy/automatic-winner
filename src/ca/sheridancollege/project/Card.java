@@ -34,14 +34,9 @@ public abstract class Card {
      */
     @Override
     public String toString(){
-        String rankName;
-        switch(rank){ case 11 -> rankName = "Jack";
-            case 12 -> rankName = "Queen";
-            case 13 -> rankName = "King";
-            case 14 -> rankName = "Ace";
-            default -> rankName = String.valueOf(rank);
-      }
-        return rankName +"of " + suit;
+       
+        
+        return rank +"of " + suit;
     }
 
 }
