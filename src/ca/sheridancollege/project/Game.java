@@ -23,6 +23,7 @@ public abstract class Game {
         this.name = name;
         players = new ArrayList();
     }
+    
 
     /**
      * @return the name
@@ -31,9 +32,10 @@ public abstract class Game {
         return name;
     }
 
-    /**
-     * @return the players of this game
-     */
+   public void setPlayers(ArrayList<Player> players) {
+        this.players = players;
+   }
+        
     public ArrayList<Player> getPlayers() {
         return players;
     }
@@ -41,9 +43,6 @@ public abstract class Game {
     /**
      * @param players the players of this game
      */
-    public void setPlayers(ArrayList<Player> players) {
-        this.players = players;
-    }
 
     /**
      * Play the game. This might be one method or many method calls depending on your game.

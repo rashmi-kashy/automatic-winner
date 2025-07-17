@@ -9,6 +9,22 @@ package ca.sheridancollege.project;
 this is the updated one
  */
 public abstract class Card {
+    private String suit;
+    private int rank;
+    
+    public Card(String suit, int rank){
+        
+        this.suit = suit;
+        this.rank = rank;}
+    
+    public int getRank(){
+    
+    return rank;}
+    
+    public String getSuit(){
+    
+    return suit;
+    }
     //default modifier for child classes
 
     /**
@@ -17,6 +33,15 @@ public abstract class Card {
      * @return a String representation of a card. Could be an UNO card, a regular playing card etc.
      */
     @Override
-    public abstract String toString();
+    public String toString(){
+        String rankName;
+        switch(rank){ case 11 -> rankName = "Jack";
+            case 12 -> rankName = "Queen";
+            case 13 -> rankName = "King";
+            case 14 -> rankName = "Ace";
+            default -> rankName = String.valueOf(rank);
+      }
+        return rankName +"of " + suit;
+    }
 
 }
